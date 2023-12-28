@@ -5,19 +5,19 @@ using System.Management.Automation.Runspaces;
 
 namespace DollarEnv.Module
 {
-    [Cmdlet("Import", "DotEnvFile")]
-    public class ImportDotEnvFileCommand : PSCmdlet
+    [Cmdlet("Import", "DotEnv")]
+    public class ImportDotEnvCommand : PSCmdlet
     {
         [Parameter(
             Mandatory = true,
             Position = 0,
             ValueFromPipeline = true,
             ValueFromPipelineByPropertyName = true)]
-        public string DotEnvFile { get; set; }
+        public string File { get; set; }
 
         protected override void ProcessRecord()
         {
-            var filePath = Path.GetFullPath(DotEnvFile);
+            var filePath = Path.GetFullPath(File);
             using var fileStream = new FileStream(filePath, FileMode.Open);
 
             var variables = FileParser.ParseVariables(fileStream);

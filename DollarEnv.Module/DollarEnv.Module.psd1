@@ -12,7 +12,7 @@
 RootModule = 'DollarEnv.Module.psm1'
 
 # Version number of this module.
-ModuleVersion = '0.1.0'
+ModuleVersion = '0.1.1'
 
 # Supported PSEditions
 # CompatiblePSEditions = @()
@@ -30,7 +30,7 @@ CompanyName = 'Unknown'
 Copyright = '(c) Lewis Hopkins. All rights reserved.'
 
 # Description of the functionality provided by this module
-# Description = ''
+Description = 'Allows loading environment variables from a dotenv (.env) file into the current powershell session'
 
 # Minimum version of the PowerShell engine required by this module
 # PowerShellVersion = ''

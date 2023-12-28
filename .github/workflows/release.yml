@@ -32,7 +32,7 @@ jobs:
 
     - name: Verify manifest version matches tag
       shell: pwsh
-      run: if ((Test-ModuleManifest -Path .\DollarEnv.Module.psd1).Version -ne "$env:MODULE_VERSION") { exit 1 }
+      run: if ((Test-ModuleManifest -Path ./DollarEnv.Module/DollarEnv.Module.psd1).Version -ne "$env:MODULE_VERSION") { exit 1 }
       env:
         MODULE_VERSION: ${{ github.ref }}
         

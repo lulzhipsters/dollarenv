@@ -29,6 +29,12 @@ jobs:
       
     - name: Test
       run: dotnet test --no-build --verbosity normal
+
+    - name: Verify manifest version matches tag
+      shell: pwsh
+      run: if ((Test-ModuleManifest -Path .\DollarEnv.Module.psd1).Version -ne "$env:MODULE_VERSION") { exit 1 }
+      env:
+        MODULE_VERSION: ${{ github.ref }}
         
     - name: Create Release
       id: create_release

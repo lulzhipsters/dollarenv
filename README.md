@@ -27,4 +27,5 @@ When quoted, can contain other characters, such as
 When not quoted, values can only contain non-special characters.
 
 # Intended future support
+  - Search directory heirarchy for dotenv to import
   - Variable Expansion (see [dotenv-expand](https://github.com/motdotla/dotenv-expand))

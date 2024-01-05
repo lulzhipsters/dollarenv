@@ -28,4 +28,5 @@ When not quoted, values can only contain non-special characters.
 
 # Intended future support
   - Search directory heirarchy for dotenv to import
+  - Override existing env var only when -Override flag provided
   - Variable Expansion (see [dotenv-expand](https://github.com/motdotla/dotenv-expand))
